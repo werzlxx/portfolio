@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо</title>
+    <!-- Підключення шрифтів з параметром font-display: swap для оптимізації -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212; /* Темний фон */
+            color: #e0e0e0; /* Світло-сірий текст */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color:#545455; /* Темний фон для шапки */
+            color: #e0e0e0; /* Світлий текст */
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            font-weight: bold; /* Жирний шрифт */
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold; /* Жирний шрифт для навігації */
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+        }
+
+        .project-card {
+            background-color: #1e1e1e; /* Темний фон для картки */
+            border: 1px solid #333; /* Темний контур */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* Lazy loading для зображень */
+        .project-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            loading: lazy; /* Лінивий лоадинг */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #e0e0e0;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .skills-list li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .skills-list li span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header>
+        <div class="container">
+            <h1>Моє Портфоліо</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Про мене</a></li>
+                    <li><a href="#skills">Мої навички</a></li>
+                    <li><a href="#projects">Проекти</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Секція "Про мене" -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Про мене</h2>
+            <p>Привіт! Мене звати Гліб. Я займаюся веб-розробкою та люблю створювати цікаві проекти, які вирішують реальні завдання. Маю досвід у HTML, CSS, JavaScript та React. Моя мета — постійно вдосконалювати свої навички та створювати корисні продукти.</p>
+        </div>
+    </section>
+
+    <!-- Секція "Мої навички" -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Мої навички</h2>
+            <ul class="skills-list">
+                <li><span>HTML:</span> Досвід у створенні структурованих веб-сторінок.</li>
+                <li><span>CSS:</span> Робота з макетами, анімаціями та адаптивним дизайном.</li>
+                <li><span>JavaScript:</span> Розробка інтерактивних елементів та логіки на клієнтській стороні.</li>
+                <li><span>React:</span> Створення сучасних веб-додатків за допомогою React та Redux.</li>
+                <li><span>Node.js:</span> Використання для розробки серверних додатків та API.</li>
+                <li><span>Git:</span> Вміння працювати з системами контролю версій для командної роботи.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Розділ "Проекти" -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Проекти</h2>
+
+            <!-- Проект 1: Тетріс -->
+            <div class="project-card">
+                <img src="https://i.postimg.cc/5NMxc6XG/DALL-E-2024-11-09-10-35-52-A-vibrant-and-dynamic-digital-illustration-inspired-by-the-classic-game.webp" alt="Тетріс" class="project-image">
+                <h3>Проект 1: Тетріс</h3>
+                <p>Класична гра Тетріс, створена за допомогою HTML, CSS та JavaScript. Мета гри — скласти горизонтальні лінії без пробілів.</p>
+                <a href="https://werzlxx.github.io/TETRIS/" target="_blank" class="btn">Переглянути Тетріс</a>
+            </div>
+
+            <!-- Проект 2: Гра про м'ячик -->
+            <div class="project-card">
+                <img src="file:///C:/Users/User_6/Downloads/399a64e6-43d1-4b2c-a39c-b69ffee4f7ff.webp" alt="Гра про м'ячик" class="project-image">
+                <h3>Проект 2: Гра про м'ячик</h3>
+                <p>Гра на JavaScript, в якій гравцю потрібно керувати м'ячем, щоб уникати перешкод. Ідеально для тренування реакції.</p>
+                <a href="https://werzlxx.github.io/game-ball/" target="_blank" class="btn">Переглянути гру</a>
+            </div>
+
+            <!-- Проект 3: Вгадай число -->
+            <div class="project-card">
+                <img src="https://i.postimg.cc/NLhFS4WP/Gemini-Generated-Image-tvtm53tvtm53tvtm.jpg" alt="Гра Вгадай Число" class="project-image">
+                <h3>Проект 3: Вгадай число</h3>
+                <p>Гра, де користувач повинен вгадати випадково згенероване число. Використано JavaScript для генерації числа та логіки гри.</p>
+                <a href="https://werzlxx.github.io/-/" target="_blank" class="btn">Переглянути гру</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал сайту -->
+    <footer>
+        <p>&copy; 2024 Гліб. Всі права захищені.</p>
+    </footer>
+
+</body>
+</html>
